@@ -1,0 +1,9 @@
+version: "3.9"
+services:
+  health:
+    build:
+      context: .
+    image: @project.name@:@project.version@
+    container_name: "health_check"
+    ports:
+      - "8080:8080"

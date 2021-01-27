@@ -54,11 +54,11 @@
                         <configuration>
                             <resources>
                                 <resource>
-                                    <directory>${project.basedir}/deploy</directory>
+                                    <directory>${project.basedir}/deploy/container-config</directory>
                                     <filtering>true</filtering>
                                 </resource>
                             </resources>
-                            <outputDirectory>${project.build.directory}/deploy</outputDirectory>
+                            <outputDirectory>${project.build.directory}</outputDirectory>
                         </configuration>
                     </execution>
                 </executions>
