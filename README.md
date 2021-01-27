@@ -1,7 +1,7 @@
 
 
 
-####Заметки
+#### Заметки
 
 Прототип сервиса проверки доступности приложения
 
@@ -13,7 +13,7 @@
 
 Docker Image построен на официальном образе https://hub.docker.com/_/openjdk
 
-Сборка java приложения, docker-котейнера и его запуск
+Сборка java приложения, docker-контейнера и его запуск
 ```
 mvn clean install package 
 docker-compose -f target/docker-compose.yml build
