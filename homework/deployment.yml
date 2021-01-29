@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: health-app-deployment
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: health-app
+  template:
+    metadata:
+      labels:
+        app: health-app
+    spec:
+      containers:
+        - name: health-app
+          image: symryvvin/health-app:1.0
+          ports:
+            - name: web
+              containerPort: 8080
+          livenessProbe:
+            httpGet:
+              port: 8080
+              path: /
+            initialDelaySeconds: 10
+            periodSeconds: 5
+            timeoutSeconds: 2
+          readinessProbe:
+            httpGet:
+              port: 8080
+              path: /health
+            initialDelaySeconds: 10
+            periodSeconds: 5
