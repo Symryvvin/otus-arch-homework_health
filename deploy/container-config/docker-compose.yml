@@ -3,7 +3,7 @@ services:
   health:
     build:
       context: .
-    image: @project.name@:@project.version@
-    container_name: "health_check"
+    image: symryvvin/@project.name@:@project.version@
+    container_name: @project.name@
     ports:
       - "8080:8080"

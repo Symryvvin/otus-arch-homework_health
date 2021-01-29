@@ -10,8 +10,8 @@
     </parent>
     <groupId>ru.aizen</groupId>
     <artifactId>health</artifactId>
-    <version>1.0.0</version>
-    <name>health</name>
+    <version>1.0</version>
+    <name>health-app</name>
     <description>Arch.Homework OTUS</description>
     <properties>
         <java.version>11</java.version>
