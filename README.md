@@ -39,10 +39,11 @@ StatusCode        : 200
 StatusDescription :
 Content           : {"status":"OK"}
 ```
-Все OK, пушим образ в docker-hub
+Все OK, пушим образы в docker-hub
 ```
 docker login -u symryvvin
-docker push symryvvin/health:latest
+docker push symryvvin/health:1.0
+docker push symryvvin/health:2.0
 ```
 
 Установка Kubectl & Minikube

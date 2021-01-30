@@ -17,22 +17,20 @@ public class HealthController {
 
 	@RequestMapping(value = "/health",
 			method = RequestMethod.GET,
-			produces = {MediaType.APPLICATION_JSON_VALUE}
-	)
-	public HealthResponse health() {
-		return new HealthResponse("OK");
+			produces = {MediaType.APPLICATION_JSON_VALUE})
+	public ResponseEntity<HealthResponse> health() {
+		return new ResponseEntity<>(new HealthResponse("OK"), HttpStatus.OK);
 	}
 
 	@RequestMapping(value = "/version",
 			method = RequestMethod.GET,
-			produces = {MediaType.TEXT_PLAIN_VALUE}
-	)
-	public String version() {
-		return version;
+			produces = {MediaType.TEXT_PLAIN_VALUE})
+	public ResponseEntity<String> version() {
+		return new ResponseEntity<>(version, HttpStatus.OK);
 	}
 
-	@GetMapping("/")
-	public ResponseEntity<String> live() {
+	@GetMapping("/ready")
+	public ResponseEntity<String> ready() {
 		return new ResponseEntity<>(HttpStatus.OK);
 	}
 
