@@ -3,7 +3,7 @@
 kubectl apply -f .
 ```
 
-URL для проверка сервиса
+URL для проверки сервиса
 ```
 http://arch.homework/otusapp/ushakov/health
 
